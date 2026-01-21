@@ -38,6 +38,14 @@
 .bg-naviblue {
      background-color: #1A0B2E;
 }
+.section-title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+    margin: 120px auto 40px;
+}
+
 
 /* main style */
 
@@ -84,12 +92,8 @@
     width: 24px;
 }
 
-.section-title{
-    font-size: 3rem;
-    font-weight: bold;
-    margin-top: 50px;
-    
-}
+
+
 /* banner related style */
 #banner {
     /* border: 5px solid steelblue; */
@@ -185,6 +189,55 @@ font-size: 1rem;
  margin-top: 16px;
 
 }
+/* card related style */
+.card {
+    border: 1px solid #230E3D;
+    background: #230E3D;
+    margin: none;
+}
+.card-content {
+    color: white;
+    align-items: center;
+}
+.card-container>* {
+    /* border: 2px solid goldenrod; */
+    background-color: #351165;
+    padding: 40px;
+    border-radius: 40px;
+    
+}
+.sound {
+    grid-area: sound;
+    max-width: 380px;
+}
+.phone {
+    grid-area: phone;
+}
+.community {
+    grid-area: community;
+
+}
+.interviews {
+    grid-area: interviews;
+}
+.resources {
+    grid-area: resources;
+}
+
+
+.card-container {
+    display: grid;
+    margin: 40px auto 120px; 
+    gap: 20px;
+    max-width: 1200px;
+    grid-template-areas: 
+    "sound       phone      phone"
+    "sound       community  community"
+    "interviews  interviews resources"
+    
+    
+}
+
 
 
 /* mobile-phone divice related style */
@@ -193,19 +246,39 @@ font-size: 1rem;
     .nav-content .btn {
         display: none;
     }
+    .banner-container{
+        padding: 0 20px;
+    }
    .image-mobile{ 
     display: block;
    }
    .nav-content {
     justify-content: space-around;
    }
-   .about-container{
+   .about-container {
     padding: 0 10px;
+   }
+
    }
    .box{
-    padding: 0 10px;
+    padding: 20px;
     grid-template-columns: repeat(2, 1fr);
    }
+   .phone, .sound, .community, .interviews, .resources {
+    width: 400px;
+    margin: 0 auto;
+   }
+
+   .card-container {
+    display: grid;
+    padding: 10px;
+    grid-template-areas: 
+    "sound "
+    "phone"
+    "community"
+    "interviews"
+    "resources" 
+}
    
 
 }
