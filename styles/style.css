@@ -32,15 +32,16 @@
 .color-white {
     color: white;
 }
-
+.color-green{
+    color: #00FF88;
+}
+.bg-naviblue {
+     background-color: #1A0B2E;
+}
 
 /* main style */
 
 /* navbar related style */
-header {
-    background-color: #1A0B2E;
-    /* text-align: center; */
-}
 
 .nav-content {  
    max-width: 1200px;
@@ -82,32 +83,42 @@ header {
     display: none;
     width: 24px;
 }
+
+.section-title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 50px;
+    
+}
 /* banner related style */
 #banner {
     /* border: 5px solid steelblue; */
     width: 100%;
-    height: 100%;
     background: url(../assets/hero-bg.png);
     background-position: center;
     background-repeat: no-repeat;
-    height: 760px;
+    background-size: cover;
+    /* height: auto; */
+    min-height: 300px;
 
 }
 .banner-container {
    display: grid;
    place-items: center;
    text-align: center;
+   position: relative;
 
 }
 .center-box {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 80%;
+    max-width: 350px;
+    /* height: 350px; */
     margin-top: 80px;
 }
 .circle {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .mic {
     position: absolute;
@@ -117,6 +128,19 @@ header {
     width: 100px;
     height: auto;
 }
+.banner-container .center-box span {
+    background-color: #00FF88;
+    color: #1A0B2E;
+    font-weight: 700;
+    padding: 6px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    position: absolute;
+    box-shadow: 3px 0 20px #27e98ff7;
+    right: -15px;
+    top: 40px;
+
+}
 
 .brand{
     font-weight: 900;
@@ -125,22 +149,48 @@ header {
 }
 .banner-button {
     margin: 24px auto 100px;
-    gap: 8px;
+    gap: 50px;
 }
-.badge {
-    background: rgba(38, 212, 38, 0.99);
-    color: #1A0B2E;
-    box-shadow: rgba(96, 236, 96, 0.686);
+
+
+/* about section related style */
+.about {
+    border: 1px solid #1A0B2E;
+}
+.about-container {
+    max-width: 1200px;
+    margin: 0px auto;
     text-align: center;
-    margin-top: 500px;
-    
+   
+}
+.box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
+    align-items: center;
+}
+.about-container hr {
+    margin: 80px;
+
+}
+.box-contant h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00FF88;
+}
+.box-contant p{
+font-size: 1rem;
+ color: white;
+ text-transform: uppercase;
+ margin-top: 16px;
+
 }
 
 
 /* mobile-phone divice related style */
 @media screen and (max-width: 576px) {
     .nav-content ul,
-    .btn {
+    .nav-content .btn {
         display: none;
     }
    .image-mobile{ 
@@ -149,6 +199,15 @@ header {
    .nav-content {
     justify-content: space-around;
    }
+   .about-container{
+    padding: 0 10px;
+   }
+   .box{
+    padding: 0 10px;
+    grid-template-columns: repeat(2, 1fr);
+   }
+   
+
 }
 
 /* medium device related style */
