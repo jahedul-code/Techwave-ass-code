@@ -5,14 +5,23 @@
 .font-inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  /* margin: 0; */
+  margin: 0;
 }
+/* shared style */
+
+
+
+
+
+/* main style */
+
+/* navbar related style */
 nav {
     border: 1px solid blue;
     background-color: #1A0B2E;
 }
 .nav-content {  
-   border: 1px solid red;
+   /* border: 1px solid red; */
    max-width: 1200px;
    display: flex;
    justify-content: space-between;
@@ -31,8 +40,42 @@ nav {
     border: black;
 
 }
+.logo span {
+    background: linear-gradient(#9100F8, #FB09B4, #F7E93F);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
 .nav-content li {
     text-decoration: none;
     list-style: none; 
     color: white;
 }
+.btn {
+    width: 135px;
+    padding: 12px 16px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(#9100f8, #fb09b2, #F7E93F);
+}
+.image-mobile {
+    display: none;
+    width: 24px;
+}
+/* mobile-phone divice related style */
+@media screen and (max-width: 576px) {
+    .nav-content ul,
+    .btn {
+        display: none;
+    }
+   .image-mobile{ 
+    display: block;
+   }
+   .nav-content {
+    justify-content: space-around;
+   }
+}
+/* medium device related style */
