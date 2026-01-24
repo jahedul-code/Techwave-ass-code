@@ -133,11 +133,11 @@ background
     transform: translate(-50%, -50%);
     width: 100px;
     height: auto;
-    animation: micMove 5s ease-in-out infinite;
+    animation: micMove 2s ease-in-out infinite;
 }
 @keyframes micMove {
-    0% { transform: translate(-50%, -50%) rotate(0deg);}
-    100% { transform: translate(-50%, -50%) rotate(360deg);}
+    0% { transform:translate(-50%, -50%) rotate(0deg);}
+    100% { transform:translate(-50%, -50%) rotate(360deg);}
 
 
 }
